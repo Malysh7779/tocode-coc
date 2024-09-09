@@ -14,12 +14,18 @@
         :to="link"
       >See more</router-link>
     </div>
-    <slot name="footer"></slot>
+    <!-- <slot name="footer"></slot> -->
+    <CardFooter :id="id"/>
   </div>
 </template>
 
 <script>
+import CardFooter from '@/components/UI/CardFooter.vue'
+
 export default {
+  components: {
+    CardFooter
+  },
   props: {
     name: {
       type: String,
@@ -34,6 +40,9 @@ export default {
     },
     link: {
       type: String
+    },
+    id: {
+      type: Number
     }
   }
 }

@@ -24,11 +24,16 @@ const routers = createRouter({
             path: '/:itemAlias',
             name: 'itemAlias',
             component: Item
+        },        
+        {
+            path: '/404',
+            name: '404',
+            component: NotFoundPage
         },
         {
             path: '/:CatchAll(.*)',
-            name: '404',
-            component: NotFoundPage
+            name: 'all',
+            redirect: '/404'
         }
     ]
 })

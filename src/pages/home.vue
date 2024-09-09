@@ -6,11 +6,12 @@
         :title="item.title"
         :imgUrl="item.img"
         :link="`/${item.alias}`"
+        :id="item.id"
       >
         <template v-slot:body>
           {{ item.descr }}
         </template>
-        <template v-slot:footer>
+        <!-- <template v-slot:footer>
           <div class="card-stats">
             <div
               v-for="(stat, index) in item.info"
@@ -21,7 +22,7 @@
               <div class="stat">{{ stat.title }}</div>
             </div>
           </div>
-        </template>
+        </template> -->
       </Card>
     </slide>
 
